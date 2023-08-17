@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_survey_checkboxes",
+  "info": {
+    "displayName": "checkbox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "is_required": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "is_dependent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "dependent_question": {
+      "type": "string"
+    },
+    "dependent_answer": {
+      "type": "string",
+      "required": false
+    },
+    "options": {
+      "displayName": "Options",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.options",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    }
+  }
+}

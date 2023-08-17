@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_survey_recurrings",
+  "info": {
+    "displayName": "recurring"
+  },
+  "options": {},
+  "attributes": {
+    "time": {
+      "type": "time",
+      "required": true
+    }
+  }
+}

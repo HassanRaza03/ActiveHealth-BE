@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fitbits",
+  "info": {
+    "singularName": "fitbit",
+    "pluralName": "fitbits",
+    "displayName": "Fitbit"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "user_profile": {
+      "type": "json",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "fitbit"
+    }
+  }
+}

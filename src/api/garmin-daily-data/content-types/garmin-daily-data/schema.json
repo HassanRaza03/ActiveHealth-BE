@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "garmin_daily_datas",
+  "info": {
+    "singularName": "garmin-daily-data",
+    "pluralName": "garmin-daily-datas",
+    "displayName": "Garmin Daily Data",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sleep_value": {
+      "type": "string"
+    },
+    "sleep_target": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "string"
+    },
+    "calories_value": {
+      "type": "string"
+    },
+    "calories_target": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "garmin_daily_datum"
+    },
+    "intensity": {
+      "type": "string"
+    },
+    "min_heart_rate": {
+      "type": "string"
+    },
+    "max_heart_rate": {
+      "type": "string"
+    }
+  }
+}

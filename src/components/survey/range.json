@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_survey_ranges",
+  "info": {
+    "displayName": "range",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "is_required": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "is_dependent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "dependent_question": {
+      "type": "string",
+      "required": false
+    },
+    "dependent_answer": {
+      "type": "string"
+    },
+    "min": {
+      "type": "float",
+      "required": true
+    },
+    "max": {
+      "type": "float",
+      "required": true
+    },
+    "step": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "order": {
+      "required": true,
+      "unique": false,
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_survey_answers",
+  "info": {
+    "displayName": "question_answers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answers": {
+      "displayName": "answers",
+      "type": "component",
+      "repeatable": true,
+      "component": "answer.answers",
+      "required": true
+    },
+    "isReactionQuestion": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

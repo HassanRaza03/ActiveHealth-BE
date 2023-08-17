@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fitbit_daily_datas",
+  "info": {
+    "singularName": "fitbit-daily-data",
+    "pluralName": "fitbit-daily-datas",
+    "displayName": "Fitbit Daily Data",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sleep_target": {
+      "type": "string"
+    },
+    "sleep_value": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "string"
+    },
+    "calories_target": {
+      "type": "string"
+    },
+    "calories_value": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "fitbit_daily_data"
+    },
+    "intensity": {
+      "type": "string"
+    },
+    "min_heart_rate": {
+      "type": "string"
+    },
+    "max_heart_rate": {
+      "type": "string"
+    }
+  }
+}

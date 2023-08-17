@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscribe_surveys",
+  "info": {
+    "singularName": "subscribe-survey",
+    "pluralName": "subscribe-surveys",
+    "displayName": "Subscribe Survey",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "survey": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::survey.survey",
+      "inversedBy": "subscribe_surveys"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "subscribe_surveys"
+    },
+    "subscribe_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer.answer",
+      "mappedBy": "subscribe_survey"
+    }
+  }
+}

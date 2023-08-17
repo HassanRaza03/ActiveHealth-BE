@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "device_tokens",
+  "info": {
+    "singularName": "device-token",
+    "pluralName": "device-tokens",
+    "displayName": "Device Token",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fcm": {
+      "type": "text",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "device_tokens"
+    }
+  }
+}

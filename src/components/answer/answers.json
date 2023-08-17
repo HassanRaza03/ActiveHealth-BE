@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_answer_answers",
+  "info": {
+    "displayName": "answers"
+  },
+  "options": {},
+  "attributes": {
+    "answer": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

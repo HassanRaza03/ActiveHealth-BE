@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answers",
+  "info": {
+    "singularName": "answer",
+    "pluralName": "answers",
+    "displayName": "Submitted Surveys",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subscribe_survey": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subscribe-survey.subscribe-survey",
+      "inversedBy": "answers"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "answers"
+    },
+    "question_info": {
+      "displayName": "answers",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.answers",
+      "required": true
+    },
+    "survey_title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

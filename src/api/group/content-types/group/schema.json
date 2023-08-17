@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Groups",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 3,
+      "unique": true
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "groups"
+    },
+    "surveys": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::survey.survey",
+      "mappedBy": "group"
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

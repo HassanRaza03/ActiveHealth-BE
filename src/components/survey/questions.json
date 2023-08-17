@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_survey_questions",
+  "info": {
+    "displayName": "questions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "maxLength": 50
+    },
+    "is_dependent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "dependent_question": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "dependent_answer": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "is_required": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    }
+  }
+}

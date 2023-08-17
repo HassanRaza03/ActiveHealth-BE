@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "surveys",
+  "info": {
+    "singularName": "survey",
+    "pluralName": "surveys",
+    "displayName": "Surveys",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group.group",
+      "inversedBy": "surveys"
+    },
+    "time": {
+      "displayName": "recurring",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.recurring"
+    },
+    "text_field": {
+      "displayName": "questions",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.questions"
+    },
+    "checkbox": {
+      "displayName": "checkbox",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.checkbox"
+    },
+    "radio": {
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.checkbox"
+    },
+    "range": {
+      "displayName": "range",
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.range",
+      "required": false
+    },
+    "subscribe_surveys": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscribe-survey.subscribe-survey",
+      "mappedBy": "survey"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200,
+      "required": true
+    },
+    "expire_in": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "reaction": {
+      "type": "component",
+      "repeatable": true,
+      "component": "survey.questions"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "survey"
+    }
+  }
+}

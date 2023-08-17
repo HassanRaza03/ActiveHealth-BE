@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gramins",
+  "info": {
+    "singularName": "gramin",
+    "pluralName": "gramins",
+    "displayName": "Garmin",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token_key": {
+      "type": "string",
+      "required": true
+    },
+    "token_secret": {
+      "type": "string",
+      "required": true
+    },
+    "user_profile": {
+      "type": "json",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "garmin"
+    }
+  }
+}
